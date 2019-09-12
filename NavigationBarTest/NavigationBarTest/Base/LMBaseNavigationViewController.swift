@@ -49,8 +49,8 @@ extension LMBaseNavigationViewController: UIGestureRecognizerDelegate {
 }
 
 extension UINavigationController {
-    func barbBackgroundColor(hex: UInt64) -> Void {
-         self.navigationBar.setBackgroundImage(UIColor.mm_colorImgHex(color_vaule: hex,alpha: 1), for: UIBarPosition.any, barMetrics: .default)
+    func barbBackgroundColor(hex: UInt64, alpha: CGFloat) -> Void {
+         self.navigationBar.setBackgroundImage(UIColor.mm_colorImgHex(color_vaule: hex,alpha: alpha), for: UIBarPosition.any, barMetrics: .default)
     }
     
     

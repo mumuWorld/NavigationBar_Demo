@@ -22,11 +22,13 @@ class LMRootViewController: LMBaseViewController {
         super.viewDidLoad()
         defaultSet()
         print("DidLoad---\(view.frame)")
-        changeBarTranslucent()
+//        changeBarTranslucent()
 //        adjustTableView()
 //        self.navigationController?.navigationBar.barStyle = .black
 //        setBartintColor()
+        setbarBackgrounImg(alpha: 0.5)
 //        setbarBackgrounImg()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,8 +68,8 @@ class LMRootViewController: LMBaseViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor.purple
     }
     
-    func setbarBackgrounImg() -> Void {
-        self.navigationController?.barbBackgroundColor(hex: 0xADFF2F)
+    func setbarBackgrounImg(alpha: CGFloat = 1.0) -> Void {
+        self.navigationController?.barbBackgroundColor(hex: 0xADFF2F,alpha: alpha)
     }
 }
 
