@@ -8,8 +8,39 @@
 
 import UIKit
 
-class LMBaseTableViewController: UITableViewController {
+let LMEmptyCellID = "LMEmptyCellID"
+class LMBaseTableViewController: LMBaseViewController {
     
+    lazy var listView: UITableView = {
+        let list = UITableView(frame: .zero, style: .plain)
+        list.delegate = self
+        list.dataSource = self
+        list.estimatedRowHeight = 0
+        list.estimatedSectionFooterHeight = 0
+        list.estimatedSectionHeaderHeight = 0
+        list.register(UITableViewCell.self, forCellReuseIdentifier: LMEmptyCellID)
+        return list
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+}
+
+extension LMBaseTableViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: LMEmptyCellID, for: indexPath)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 44
+    }
 }
 
 @objc 

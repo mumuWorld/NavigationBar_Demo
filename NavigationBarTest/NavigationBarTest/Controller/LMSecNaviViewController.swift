@@ -9,22 +9,53 @@
 import UIKit
 
 class LMSecNaviViewController: LMBaseViewController {
+    
+    var testDic:[Int: [Int]] = Dictionary()
+    
+    lazy var tmp: UIView? = {
+        var testLazy = UIView()
+        return testLazy
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "第二个标题"
-        // Do any additional setup after loading the view.
+        testDic[1] = [1,2,3,4,5,6]
+        
+        view.addSubview(tmp!)
+        DispatchQueue.main.async {
+            self.tmp!.removeFromSuperview()
+            self.tmp = nil
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        printLog(message: "d")
+        testLoadXibVC()
+        printLog(message: "f")
+//        arrtest()
+//        print(tmp)
     }
-    */
-
+    
+    func testLoadNormal() {
+        let targetVC = LMLifeListViewController()
+        printLog(message: "e")
+        navigationController?.pushViewController(targetVC, animated: true)
+    }
+    
+    func testLoadXibVC() -> Void {
+        let xib = LMXibLifeListViewController.init(nibName: "LMXibLifeListViewController", bundle: nil)
+        printLog(message: "e")
+        xib.view.backgroundColor = .red
+        navigationController?.pushViewController(xib, animated: true)
+    }
+    
+    func arrtest() -> Void {
+        var arr = testDic[1]
+        
+        printLog(message: arr)
+        arr?.removeAll()
+        
+        printLog(message: testDic)
+    }
 }

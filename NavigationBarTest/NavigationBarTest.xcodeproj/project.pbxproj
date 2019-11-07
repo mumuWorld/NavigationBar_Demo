@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF11D6972371120D00FF21D4 /* LMLifeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11D6962371120D00FF21D4 /* LMLifeListViewController.swift */; };
+		DF11D69A2371156C00FF21D4 /* MMTestLifeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11D6992371156C00FF21D4 /* MMTestLifeView.swift */; };
+		DF11D69D2371194A00FF21D4 /* LMXibLifeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11D69B2371194A00FF21D4 /* LMXibLifeListViewController.swift */; };
+		DF11D69E2371194A00FF21D4 /* LMXibLifeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF11D69C2371194A00FF21D4 /* LMXibLifeListViewController.xib */; };
 		DFF332B82328C8F00015295C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF332B72328C8F00015295C /* AppDelegate.swift */; };
 		DFF332BD2328C8F00015295C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF332BB2328C8F00015295C /* Main.storyboard */; };
 		DFF332BF2328C8F20015295C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF332BE2328C8F20015295C /* Assets.xcassets */; };
@@ -38,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF11D6962371120D00FF21D4 /* LMLifeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMLifeListViewController.swift; sourceTree = "<group>"; };
+		DF11D6992371156C00FF21D4 /* MMTestLifeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMTestLifeView.swift; sourceTree = "<group>"; };
+		DF11D69B2371194A00FF21D4 /* LMXibLifeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMXibLifeListViewController.swift; sourceTree = "<group>"; };
+		DF11D69C2371194A00FF21D4 /* LMXibLifeListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LMXibLifeListViewController.xib; sourceTree = "<group>"; };
 		DFF332B42328C8F00015295C /* NavigationBarTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationBarTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF332B72328C8F00015295C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFF332BC2328C8F00015295C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF11D6982371155200FF21D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF11D6992371156C00FF21D4 /* MMTestLifeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DFF332AB2328C8F00015295C = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +121,7 @@
 		DFF332B62328C8F00015295C /* NavigationBarTest */ = {
 			isa = PBXGroup;
 			children = (
+				DF11D6982371155200FF21D4 /* View */,
 				DFF332F12328E0200015295C /* Extension */,
 				DFF332EC2328CA1C0015295C /* Controller */,
 				DFF332EB2328CA150015295C /* Base */,
@@ -149,6 +166,9 @@
 			children = (
 				DFF332E92328C9D40015295C /* LMRootViewController.swift */,
 				DFF332ED2328CC1B0015295C /* LMSecNaviViewController.swift */,
+				DF11D6962371120D00FF21D4 /* LMLifeListViewController.swift */,
+				DF11D69B2371194A00FF21D4 /* LMXibLifeListViewController.swift */,
+				DF11D69C2371194A00FF21D4 /* LMXibLifeListViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -266,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFF332C22328C8F20015295C /* LaunchScreen.storyboard in Resources */,
+				DF11D69E2371194A00FF21D4 /* LMXibLifeListViewController.xib in Resources */,
 				DFF332BF2328C8F20015295C /* Assets.xcassets in Resources */,
 				DFF332BD2328C8F00015295C /* Main.storyboard in Resources */,
 			);
@@ -296,8 +317,11 @@
 				DFF332E62328C8FF0015295C /* LMBaseNavigationViewController.swift in Sources */,
 				DFF332EE2328CC1B0015295C /* LMSecNaviViewController.swift in Sources */,
 				DFF332EA2328C9D40015295C /* LMRootViewController.swift in Sources */,
+				DF11D69A2371156C00FF21D4 /* MMTestLifeView.swift in Sources */,
+				DF11D69D2371194A00FF21D4 /* LMXibLifeListViewController.swift in Sources */,
 				DFF332B82328C8F00015295C /* AppDelegate.swift in Sources */,
 				DFF332F02328E01C0015295C /* UIColor+MM_Extension.swift in Sources */,
+				DF11D6972371120D00FF21D4 /* LMLifeListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
