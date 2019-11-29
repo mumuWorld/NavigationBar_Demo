@@ -26,9 +26,9 @@ class LMXibLifeListViewController: LMBaseTableViewController {
         printLog(message: "1")
         lifeView.tag = 10
         printLog(message: "2")
-//        view.addSubview(lifeView)
+        view.addSubview(lifeView)
         printLog(message: "3")
-        lifeView.frame = CGRect(x: 0, y: 100, width: 100, height: 100)
+        lifeView.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
         printLog(message: "6")
         
         loadViewIfNeeded()

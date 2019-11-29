@@ -31,11 +31,21 @@ class LMSecNaviViewController: LMBaseViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         printLog(message: "d")
-        testLoadXibVC()
+//        testLoadXibVC()
         printLog(message: "f")
-//        arrtest()
+        arrtest()
 //        print(tmp)
+//        strTest()
     }
+    
+    func strTest() -> Void {
+        var oriArr = [1,3,8,5,9,6]
+        oriArr.sort(by: {
+            return $0 < $1
+        })
+        print(oriArr)
+    }
+    
     
     func testLoadNormal() {
         let targetVC = LMLifeListViewController()
@@ -57,5 +67,6 @@ class LMSecNaviViewController: LMBaseViewController {
         arr?.removeAll()
         
         printLog(message: testDic)
+       
     }
 }
